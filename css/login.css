@@ -1,0 +1,359 @@
+/* Mengatur margin, padding, dan box-sizing untuk semua elemen serta menetapkan font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Menggunakan font sans-serif untuk semua elemen */
+}
+
+/* Mengatur tampilan dan latar belakang halaman */
+body {
+    display: flex; /* Menggunakan flexbox untuk penyusunan elemen */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: center; /* Menyelaraskan elemen secara horizontal di tengah */
+    min-height: 100vh; /* Memastikan body setinggi viewport */
+    background-image: url(/aset/bg_pink.jpeg); /* Menetapkan gambar latar belakang */
+}
+
+/* Mengatur kontainer utama */
+.container {
+    position: relative; /* Mengatur posisi kontainer sebagai relative */
+    width: 70vw; /* Lebar kontainer 70% dari viewport width */
+    height: 80vh; /* Tinggi kontainer 80% dari viewport height */
+    background: #fff; /* Warna latar belakang putih */
+    border-radius: 15px; /* Sudut bundar pada kontainer */
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3); /* Bayangan kotak */
+    overflow: hidden; /* Menghindari konten meluber dari kontainer */
+}
+
+/* Gradient background animation */
+.container::before {
+    content: ""; /* Menambahkan konten kosong sebelum kontainer */
+    position: absolute; /* Mengatur posisi konten sebagai absolute */
+    top: 0; /* Posisi di bagian atas kontainer */
+    left: -50%; /* Posisi horizontal dari kontainer */
+    width: 100%; /* Lebar konten sama dengan kontainer */
+    height: 100%; /* Tinggi konten sama dengan kontainer */
+    background: linear-gradient(-45deg, #f8bbd0, #b35c7d, #6f2f49); /* Gradient latar belakang */
+    z-index: 6; /* Menetapkan z-index untuk urutan tumpukan */
+    transform: translateX(100%); /* Menggeser konten keluar dari pandangan */
+    transition: 1s ease-in-out; /* Menambahkan transisi animasi */
+}
+
+/* Kontainer untuk form sign-in dan sign-up */
+.signin-signup {
+    position: absolute; /* Mengatur posisi kontainer sebagai absolute */
+    top: 0; /* Posisi di bagian atas kontainer */
+    left: 0; /* Posisi di sisi kiri kontainer */
+    width: 100%; /* Lebar kontainer 100% dari elemen induk */
+    height: 100%; /* Tinggi kontainer 100% dari elemen induk */
+    display: flex; /* Menggunakan flexbox untuk penyusunan elemen */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: space-around; /* Menyebar elemen secara horizontal */
+    z-index: 5; /* Menetapkan z-index untuk urutan tumpukan */
+}
+
+/* Mengatur form */
+form {
+    display: flex; /* Menggunakan flexbox untuk penyusunan elemen dalam form */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: center; /* Menyelaraskan elemen secara horizontal di tengah */
+    flex-direction: column; /* Menyusun elemen dalam kolom */
+    width: 40%; /* Lebar form 40% dari kontainer */
+    min-width: 238px; /* Lebar minimum form */
+    padding: 0 10px; /* Padding horizontal 10px */
+}
+
+/* Mengatur form sign-in */
+form.sign-in-form {
+    opacity: 1; /* Opasitas penuh untuk form sign-in */
+    transition: 0.5s ease-in-out; /* Transisi animasi selama 0.5 detik */
+    transition-delay: 1s; /* Penundaan transisi 1 detik */
+}
+
+/* Mengatur form sign-up */
+form.sign-up-form {
+    opacity: 0; /* Opasitas nol untuk form sign-up */
+    transition: 0.5s ease-in-out; /* Transisi animasi selama 0.5 detik */
+    transition-delay: 1s; /* Penundaan transisi 1 detik */
+}
+
+/* Mengatur judul */
+.tittle {
+    font-size: 35px; /* Ukuran font judul */
+    color: #9a4064; /* Warna teks judul */
+    margin-bottom: 10px; /* Margin bawah judul */
+}
+
+/* Mengatur field input */
+.input-field {
+    width: 100%; /* Lebar field input 100% dari elemen induk */
+    height: 50px; /* Tinggi field input */
+    background: #fff; /* Warna latar belakang putih */
+    margin: 10px 0; /* Margin atas dan bawah field input */
+    border: 2px solid #9a4064; /* Border dengan warna tertentu */
+    border-radius: 50px; /* Sudut bundar pada field input */
+    display: flex; /* Menggunakan flexbox untuk penyusunan elemen dalam field input */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+}
+
+/* Mengatur ikon dalam field input */
+.input-field i {
+    flex: 1; /* Flex item 1 bagian dari flex container */
+    text-align: center; /* Menyelaraskan teks ikon ke tengah */
+    color: #800033; /* Warna ikon */
+    font-size: 18px; /* Ukuran font ikon */
+}
+.input-field i img {
+    width: 20px; /* Lebar gambar ikon */
+}
+
+/* Mengatur input dalam field input */
+.input-field input {
+    flex: 5; /* Flex item 5 bagian dari flex container */
+    background: none; /* Menghapus latar belakang input */
+    border: none; /* Menghapus border input */
+    outline: none; /* Menghapus outline input */
+    width: 100%; /* Lebar input 100% dari field input */
+    font-size: 18px; /* Ukuran font input */
+    font-weight: 600; /* Ketebalan font input */
+    color: #444; /* Warna teks input */
+}
+
+/* Mengatur tombol */
+.btn {
+    width: 150px; /* Lebar tombol */
+    height: 50px; /* Tinggi tombol */
+    border: none; /* Menghapus border tombol */
+    border-radius: 50px; /* Sudut bundar pada tombol */
+    background: #800033; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    font-weight: 600; /* Ketebalan font tombol */
+    margin: 10px 0; /* Margin atas dan bawah tombol */
+    text-transform: uppercase; /* Mengubah teks tombol menjadi huruf kapital */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+}
+
+/* Hover effect pada tombol */
+.btn:hover {
+    background-color: #9a4064; /* Mengubah warna latar belakang tombol saat hover */
+}
+
+/* Mengatur teks media sosial */
+.social-text {
+    margin: 10px 0; /* Margin atas dan bawah teks media sosial */
+    font-size: 16px; /* Ukuran font teks media sosial */
+}
+
+/* Kontainer media sosial */
+.social-media {
+    display: flex; /* Menggunakan flexbox untuk penyusunan elemen dalam kontainer media sosial */
+    justify-content: center; /* Menyelaraskan elemen secara horizontal di tengah */
+}
+
+/* Ikon media sosial */
+.social-icon {
+    height: 45px; /* Tinggi ikon media sosial */
+    width: 45px; /* Lebar ikon media sosial */
+    display: flex; /* Menggunakan flexbox untuk penyusunan elemen dalam ikon media sosial */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: center; /* Menyelaraskan elemen secara horizontal di tengah */
+    color: black; /* Warna teks ikon media sosial */
+    border: 1px solid black; /* Border ikon media sosial */
+    border-radius: 50px; /* Sudut bundar pada ikon media sosial */
+    margin: 0 5px; /* Margin horizontal ikon media sosial */
+}
+
+/* Mengatur link */
+a {
+    text-decoration: none; /* Menghapus garis bawah pada link */
+}
+
+/* Hover effect pada ikon media sosial */
+.social-icon:hover {
+    color: #800033; /* Mengubah warna ikon media sosial saat hover */
+    border-color: #800033; /* Mengubah warna border ikon media sosial saat hover */
+}
+
+/* Kontainer panel */
+.panels-container {
+    position: absolute; /* Mengatur posisi kontainer panel sebagai absolute */
+    top: 0; /* Posisi di bagian atas kontainer */
+    left: 0; /* Posisi di sisi kiri kontainer */
+    width: 100%; /* Lebar kontainer panel 100% dari elemen induk */
+    height: 100%; /* Tinggi kontainer panel 100% dari elemen induk */
+    display: flex; /* Menggunakan flexbox untuk penyusunan elemen dalam kontainer panel */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: space-around; /* Menyebar elemen secara horizontal */
+}
+
+/* Mengatur panel */
+.panel {
+    display: flex; /* Menggunakan flexbox untuk penyusunan elemen dalam panel */
+    flex-direction: column; /* Menyusun elemen dalam kolom */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: space-around; /* Menyebar elemen secara horizontal */
+    width: 35%; /* Lebar panel 35% dari kontainer */
+    min-width: 238px; /* Lebar minimum panel */
+    padding: 0 10px; /* Padding horizontal panel */
+    text-align: center; /* Menyelaraskan teks di tengah panel */
+    z-index: 6; /* Menetapkan z-index untuk urutan tumpukan */
+}
+
+/* Panel kiri */
+.left-panel {
+    pointer-events: none; /* Menonaktifkan interaksi dengan panel kiri */
+}
+
+/* Mengatur konten dalam panel */
+.content {
+    color: #fff; /* Warna teks konten dalam panel */
+    transition: 1.1s ease-in-out; /* Transisi animasi selama 1.1 detik */
+    transition-delay: 0.5s; /* Penundaan transisi 0.5 detik */
+}
+
+/* Mengatur heading dalam panel */
+.panel h3 {
+    font-size: 24px; /* Ukuran font heading dalam panel */
+    font-weight: 600; /* Ketebalan font heading dalam panel */
+}
+
+/* Mengatur gambar dalam panel */
+.image {
+    width: 100%; /* Lebar gambar 100% dari panel */
+    transition: 1.1s ease-in-out; /* Transisi animasi selama 1.1 detik */
+    transition-delay: 0.4s; /* Penundaan transisi 0.4 detik */
+}
+
+/* Animasi untuk panel kiri */
+.left-panel .image,
+.left-panel .content {
+    transform: translateX(-200%); /* Menggeser panel kiri keluar dari pandangan */
+}
+
+/* Animasi untuk panel kanan */
+.right-panel .image,
+.right-panel .content {
+    transform: translateX(0); /* Menempatkan panel kanan dalam pandangan */
+}
+
+/* Mengatur teks akun */
+.account-text {
+    display: none; /* Menyembunyikan teks akun */
+}
+
+/* Mengatur animasi mode sign-up */
+.container.sign-up-mode::before {
+    transform: translateX(0); /* Menggeser gradient ke dalam pandangan */
+}
+
+/* Animasi untuk panel kanan dalam mode sign-up */
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content {
+    transform: translateX(200%); /* Menggeser panel kanan keluar dari pandangan */
+}
+
+/* Animasi untuk panel kiri dalam mode sign-up */
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content {
+    transform: translateX(0); /* Menempatkan panel kiri dalam pandangan */
+}
+
+/* Mengatur form sign-in dalam mode sign-up */
+.container.sign-up-mode form.sign-in-form {
+    opacity: 0; /* Menyembunyikan form sign-in dalam mode sign-up */
+}
+
+/* Mengatur form sign-up dalam mode sign-up */
+.container.sign-up-mode form.sign-up-form {
+    opacity: 1; /* Menampilkan form sign-up dalam mode sign-up */
+}
+
+/* Pointer events untuk panel dalam mode sign-up */
+.container.sign-up-mode .right-panel {
+    pointer-events: none; /* Menonaktifkan interaksi dengan panel kanan dalam mode sign-up */
+}
+
+.container.sign-up-mode .left-panel {
+    pointer-events: all; /* Mengaktifkan interaksi dengan panel kiri dalam mode sign-up */
+}
+
+/* Tombol kembali ke halaman utama */
+.back-home-btn {
+    position: absolute; /* Mengatur posisi tombol sebagai absolute */
+    top: 20px; /* Posisi 20px dari bagian atas */
+    left: 20px; /* Posisi 20px dari sisi kiri */
+    background: #800033; /* Warna latar belakang tombol */
+    /* color: #fff; */ /* Warna teks tombol (dikomentari) */
+    border: none; /* Menghapus border tombol */
+    border-radius: 50px; /* Sudut bundar pada tombol */
+    padding: 10px 20px; /* Padding tombol */
+    font-size: 16px; /* Ukuran font tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+    z-index: 10; /* Menetapkan z-index untuk urutan tumpukan */
+    transition: background-color 0.3s ease; /* Transisi animasi untuk warna latar belakang */
+}
+
+/* Mengatur gambar tombol kembali ke halaman utama */
+.back-home-btn img {
+    filter: invert(100%); /* Membalikkan warna gambar tombol */
+}
+
+/* Hover effect pada tombol kembali ke halaman utama */
+.back-home-btn:hover {
+    background-color: #9a4064; /* Mengubah warna latar belakang tombol saat hover */
+}
+
+/* Toggle password visibility */
+#toggle-password {
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+    margin-right: 10px; /* Margin kanan tombol toggle password */
+}
+
+/* Responsif untuk layar di bawah 779px */
+@media (max-width: 779px) {
+    .container {
+        width: 100vw; /* Lebar kontainer 100% dari viewport width */
+        height: 100vh; /* Tinggi kontainer 100% dari viewport height */
+    }
+}
+
+/* Responsif untuk layar di bawah 635px */
+@media (max-width: 635px) {
+    .container::before {
+        display: none; /* Menyembunyikan gradient background pada layar kecil */
+    }
+
+    form {
+        width: 80%; /* Lebar form 80% dari kontainer */
+    }
+
+    form.sign-up-form {
+        display: none; /* Menyembunyikan form sign-up */
+    }
+
+    .container.sign-up-mode2 form.sign-up-form {
+        display: flex; /* Menampilkan form sign-up dalam mode sign-up2 */
+        opacity: 1; /* Opasitas penuh untuk form sign-up */
+    }
+
+    .container.sign-up-mode2 form.sign-in-form {
+        display: none; /* Menyembunyikan form sign-in dalam mode sign-up2 */
+    }
+
+    .panels-container {
+        display: none; /* Menyembunyikan kontainer panel */
+    }
+
+    .account-text {
+        display: initial; /* Menampilkan teks akun */
+        margin-top: 30px; /* Margin atas teks akun */
+    }
+}
+
+/* Responsif untuk layar di bawah 320px */
+@media (max-width: 320px) {
+    form {
+        width: 90%; /* Lebar form 90% dari kontainer */
+    }
+}

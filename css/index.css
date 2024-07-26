@@ -1,0 +1,443 @@
+/* Mengatur box-sizing untuk semua elemen, termasuk pseudo-elemen */
+*, *::before, *::after {
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam total lebar dan tinggi elemen */
+}
+
+/* Mengatur gaya untuk elemen body */
+body {
+    font-family: 'Poppins', sans-serif; /* Mengatur jenis font */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    color: #333; /* Mengatur warna teks default */
+    display: flex; /* Menggunakan Flexbox untuk layout */
+    flex-direction: column; /* Menyusun elemen secara kolom */
+    overflow-x: hidden; /* Menghindari scrollbar horizontal */
+    background-image: url(/aset/bg_pink.jpeg); /* Mengatur gambar latar belakang */
+}
+
+/* Mengatur gaya untuk elemen h1 */
+h1 {
+    font-size: 3em; /* Ukuran font besar untuk judul utama */
+    margin: 0; /* Menghapus margin default */
+    font-weight: 600; /* Menetapkan ketebalan font */
+    color: aliceblue; /* Mengatur warna teks */
+}
+
+/* Mengatur gaya untuk elemen h2 */
+h2 {
+    color: black; /* Warna teks h2 */
+    text-shadow: 0 15px 15px palevioletred; /* Efek bayangan teks */
+    font-size: 2em; /* Ukuran font h2 */
+    margin-top: 20px; /* Margin atas */
+    font-weight: 600; /* Menetapkan ketebalan font */
+}
+
+/* Mengatur gaya untuk elemen paragraf */
+p {
+    color: aliceblue; /* Warna teks paragraf */
+    font-size: 1.2em; /* Ukuran font paragraf */
+}
+
+/* Mengatur gaya untuk elemen header */
+header {
+    background-color: #9a4064; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    position: fixed; /* Menetapkan posisi tetap di atas halaman */
+    width: 100%; /* Lebar penuh */
+    top: 0; /* Posisi di bagian atas halaman */
+    z-index: 1000; /* Menetapkan z-index untuk urutan tumpukan */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    text-shadow: 0 10px 10px black; /* Bayangan teks */
+    padding: 10px 0; /* Padding atas dan bawah */
+}
+
+
+
+/* Mengatur gaya untuk elemen nav */
+nav {
+    display: flex; /* Menggunakan Flexbox untuk layout nav */
+    justify-content: center; /* Menyelaraskan item nav secara horizontal */
+    align-items: center; /* Menyelaraskan item nav secara vertikal */
+}
+
+/* Mengatur gaya untuk daftar ul dalam elemen nav */
+nav ul {
+    list-style: none; /* Menghapus bullet list default */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    display: flex; /* Menggunakan Flexbox untuk layout daftar */
+    flex-wrap: wrap; /* Membungkus item jika diperlukan */
+    justify-content: center; /* Menyelaraskan item nav secara horizontal */
+    padding: 0 10px; /* Padding horizontal pada daftar */
+}
+
+/* Mengatur gaya untuk item dalam daftar nav */
+nav ul li {
+    margin: 5px; /* Margin antara item */
+}
+
+/* Mengatur gaya untuk tautan dalam daftar nav */
+nav ul li a {
+    color: white; /* Warna teks tautan */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    padding: 10px 20px; /* Padding pada tautan */
+    display: block; /* Menetapkan tampilan block untuk tautan */
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Transisi untuk efek hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    background: #b35c7d; /* Warna latar belakang tautan */
+    border-radius: 5px; /* Sudut membulat pada tautan */
+    border: 2px solid transparent; /* Border transparan */
+    font-size: 1em; /* Ukuran font tautan */
+}
+
+/* Efek hover pada tautan dalam daftar nav */
+nav ul li a:hover {
+    transform: translateY(-5px) translateZ(10px); /* Menggeser tautan sedikit ke atas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Meningkatkan efek bayangan */
+    border-color: whitesmoke; /* Mengubah warna border saat hover */
+}
+
+/* Mengatur gaya untuk tombol toggle menu */
+.menu-toggle {
+    display: none; /* Menyembunyikan tombol secara default */
+    background-color: #9a4064; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus border tombol */
+    font-size: 2em; /* Ukuran font tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+    position: absolute; /* Menetapkan posisi tombol sebagai absolute */
+    top: 10px; /* Posisi 10px dari bagian atas */
+    right: 10px; /* Posisi 10px dari sisi kanan */
+}
+
+/* Mengatur gaya untuk elemen main */
+main {
+    padding-top: 120px; /* Padding atas untuk memberi ruang bagi header tetap */
+    flex: 1; /* Menggunakan sisa ruang dalam kontainer flex */
+}
+
+/* Mengatur gaya untuk elemen banner */
+.banner {
+    position: relative; /* Menetapkan posisi relatif untuk elemen banner */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    overflow: hidden; /* Menghindari konten meluber */
+    margin-top: -50px; /* Margin atas negatif untuk menggeser banner ke atas */
+}
+
+/* Mengatur gaya untuk gambar banner */
+.banner-image {
+    width: 100%; /* Lebar gambar penuh */
+    display: block; /* Menetapkan tampilan block untuk gambar */
+    object-fit: cover; /* Menjaga proporsi gambar */
+}
+
+/* Mengatur gaya untuk konten dalam banner */
+.banner-content {
+    position: relative; /* Menetapkan posisi relatif */
+}
+
+/* Mengatur gaya untuk teks konten dalam banner */
+.banner-content .text-content {
+    position: absolute; /* Menetapkan posisi absolut untuk teks */
+    top: 50%; /* Menyelaraskan vertikal di tengah */
+    left: 50%; /* Menyelaraskan horizontal di tengah */
+    transform: translate(-50%, -50%); /* Menyelaraskan teks ke pusat */
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+    padding: 20px; /* Padding pada teks konten */
+    border-radius: 10px; /* Sudut membulat pada konten teks */
+}
+
+/* Mengatur gaya untuk tombol dalam konten banner */
+.banner-content .btn {
+    background-color: #9a4064; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    padding: 10px 20px; /* Padding pada tombol */
+    border-radius: 5px; /* Sudut membulat pada tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+    font-size: 1em; /* Ukuran font tombol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transisi untuk efek hover */
+    text-decoration: none; /* Menghapus garis bawah pada tombol */
+}
+
+/* Efek hover pada tombol dalam banner */
+.banner-content .btn:hover {
+    background-color: #b30045; /* Mengubah warna latar belakang saat hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Meningkatkan efek bayangan saat hover */
+}
+
+/* Mengatur gaya untuk elemen dengan id recommended, update, dan about */
+#recommended, #update, #about {
+    padding: 20px; /* Padding pada elemen */
+}
+
+/* Mengatur gaya untuk elemen novel */
+.novel {
+    background-color: #fff; /* Warna latar belakang novel */
+    padding: 20px; /* Padding pada novel */
+    margin: 10px 0; /* Margin atas dan bawah */
+    border-radius: 10px; /* Sudut membulat pada novel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan pada novel */
+}
+
+/* Mengatur gaya untuk kontainer tentang */
+.about-container {
+    max-width: 800px; /* Lebar maksimum kontainer */
+    margin: 0 auto; /* Margin otomatis untuk tengah halaman */
+    background-color: aliceblue; /* Warna latar belakang kontainer */
+    padding: 2em; /* Padding dalam kontainer */
+    border-radius: 10px; /* Sudut membulat pada kontainer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan pada kontainer */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+}
+
+/* Mengatur gaya untuk h2 dalam kontainer tentang */
+.about-container h2 {
+    font-size: 2.5em; /* Ukuran font h2 */
+    margin-bottom: 0.5em; /* Margin bawah */
+    color: #333; /* Warna teks */
+}
+
+/* Mengatur gaya untuk paragraf dalam kontainer tentang */
+.about-container p {
+    font-size: 1.2em; /* Ukuran font paragraf */
+    line-height: 1.6; /* Jarak antar baris */
+    color: #555; /* Warna teks */
+    margin: 0 0 1.5em; /* Margin bawah */
+}
+
+/* Mengatur gaya untuk elemen footer */
+footer {
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    padding: 20px; /* Padding pada footer */
+    background-color: #993f63; /* Warna latar belakang footer */
+    color: white; /* Warna teks footer */
+    position: relative; /* Menetapkan posisi relatif */
+    bottom: 0; /* Posisi di bagian bawah halaman */
+    width: 100%; /* Lebar penuh */
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2); /* Efek bayangan pada footer */
+    display: flex; /* Menggunakan Flexbox untuk layout footer */
+    flex-direction: column; /* Menyusun elemen footer secara kolom */
+    align-items: center; /* Menyelaraskan item footer ke tengah */
+}
+
+/* Mengatur gaya untuk konten footer */
+.footer-content {
+    display: flex; /* Menggunakan Flexbox untuk layout konten footer */
+    flex-direction: column; /* Menyusun elemen footer secara kolom */
+    align-items: center; /* Menyelaraskan item footer ke tengah */
+    margin-bottom: 10px; /* Margin bawah */
+}
+
+/* Mengatur gaya untuk ikon footer */
+.footer-icons {
+    display: flex; /* Menggunakan Flexbox untuk layout ikon */
+    justify-content: center; /* Menyelaraskan ikon secara horizontal */
+    margin-bottom: 10px; /* Margin bawah */
+}
+
+/* Mengatur gaya untuk tautan ikon footer */
+.footer-icons a {
+    color: white; /* Warna teks tautan ikon */
+    margin: 0 10px; /* Margin horizontal */
+    font-size: 1.5em; /* Ukuran font ikon */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    transition: color 0.3s ease; /* Transisi untuk perubahan warna */
+}
+
+/* Mengatur gaya untuk gambar ikon footer */
+.footer-icons img {
+    width: 25px; /* Lebar gambar ikon */
+}
+
+/* Efek hover pada tautan ikon footer */
+.footer-icons a:hover {
+    color: #f8bbd0; /* Mengubah warna teks saat hover */
+}
+
+/* Mengatur gaya untuk bagian kontak footer */
+.footer-contact {
+    font-size: 1em; /* Ukuran font untuk kontak */
+}
+
+/* Mengatur gaya untuk paragraf dalam kontak footer */
+.footer-contact p {
+    margin: 5px 0; /* Margin atas dan bawah */
+}
+
+/* Mengatur gaya untuk elemen dengan id novel-list dan novel-new */
+#novel-list, #novel-new {
+    display: flex; /* Menggunakan Flexbox untuk layout daftar novel */
+    flex-wrap: wrap; /* Membungkus item jika diperlukan */
+    justify-content: center; /* Menyelaraskan item daftar secara horizontal */
+    margin-top: 20px; /* Margin atas */
+}
+
+/* Mengatur gaya untuk item novel */
+.novel-item {
+    color: aliceblue; /* Warna teks item novel */
+    border: 1px solid #ccc; /* Border item novel */
+    padding: 10px; /* Padding pada item novel */
+    margin: 10px; /* Margin antara item novel */
+    display: flex; /* Menggunakan Flexbox untuk layout item novel */
+    flex-direction: column; /* Menyusun elemen item novel secara kolom */
+    align-items: center; /* Menyelaraskan item secara tengah */
+    width: 200px; /* Lebar item novel */
+    border-radius: 12px; /* Sudut membulat pada item novel */
+    background-color: rgba(0, 0, 0, 0.3); /* Latar belakang semi-transparan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan pada item novel */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk efek hover */
+}
+
+/* Efek hover pada item novel */
+.novel-item:hover {
+    transform: scale(1.05); /* Meningkatkan ukuran item saat hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Meningkatkan efek bayangan saat hover */
+}
+
+/* Mengatur gaya untuk gambar dalam item novel */
+.novel-item img {
+    max-width: 100%; /* Lebar maksimum gambar */
+    border-radius: 10px; /* Sudut membulat pada gambar */
+}
+
+/* Mengatur gaya untuk judul dalam item novel */
+.novel-item h2 {
+    margin: 10px 0 5px; /* Margin atas, bawah, dan bawah judul */
+    font-size: 1.2em; /* Ukuran font judul */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+}
+
+/* Mengatur gaya untuk paragraf dalam item novel */
+.novel-item p {
+    margin: 5px 0; /* Margin atas dan bawah */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+}
+
+/* Mengatur gaya untuk tombol dalam item novel */
+.novel-item button {
+    background-color: #9a4064; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus border tombol */
+    padding: 10px 20px; /* Padding pada tombol */
+    margin-top: 10px; /* Margin atas */
+    border-radius: 5px; /* Sudut membulat pada tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+    font-size: 1em; /* Ukuran font tombol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan pada tombol */
+}
+
+/* Efek hover pada tombol dalam item novel */
+.novel-item button:hover {
+    background-color: #b30045; /* Mengubah warna latar belakang tombol saat hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Meningkatkan efek bayangan saat hover */
+}
+
+/* Gaya responsif untuk layar dengan lebar maksimum 1024px */
+@media (max-width: 1024px) {
+    .banner-content .btn {
+        font-size: 0.9em; /* Ukuran font tombol lebih kecil */
+        padding: 8px 16px; /* Padding tombol lebih kecil */
+    }
+
+    .novel-item {
+        width: 180px; /* Lebar item novel lebih kecil */
+    }
+
+    header h1 img {
+        width: 50px; /* Lebar gambar header lebih kecil */
+        height: 50px; /* Tinggi gambar header lebih kecil */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Ukuran font h1 lebih kecil */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Ukuran font h2 lebih kecil */
+    }
+}
+
+/* Gaya responsif untuk layar dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+
+    nav ul {
+        display: none; /* Menyembunyikan daftar nav secara default */
+        flex-direction: column; /* Menyusun item nav secara kolom */
+        width: 100%; /* Lebar penuh */
+    }
+
+    nav ul.active {
+        display: flex; /* Menampilkan daftar nav jika aktif */
+    }
+
+    .menu-toggle {
+        display: block; /* Menampilkan tombol toggle menu */
+    }
+
+    .banner-content .btn {
+        font-size: 0.8em; /* Ukuran font tombol lebih kecil */
+        padding: 6px 12px; /* Padding tombol lebih kecil */
+    }
+    .open p {
+        font-size: 0.6em; /* Ukuran font p lebih kecil */
+        
+    }
+    .novel-item {
+        width: 150px; /* Lebar item novel lebih kecil */
+    }
+
+    header h1 img {
+        width: 40px; /* Lebar gambar header lebih kecil */
+        height: 40px; /* Tinggi gambar header lebih kecil */
+    }
+
+    h1 {
+        font-size: 2em; /* Ukuran font h1 lebih kecil */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Ukuran font h2 lebih kecil */
+    }
+
+    .banner {
+        margin-top: -70px; /* Margin atas banner lebih besar */
+    }
+}
+
+/* Gaya responsif untuk layar dengan lebar maksimum 480px */
+@media (max-width: 480px) {
+    .banner {
+        margin-top: -100px; /* Margin atas banner lebih besar */
+    }
+    .open p {
+        font-size: 0.4em;/* Ukuran font p lebih kecil */
+        
+    }
+    .banner-content .btn {
+        font-size: 0.7em; /* Ukuran font tombol lebih kecil */
+        padding: 5px 10px; /* Padding tombol lebih kecil */
+    }
+
+    .menu-toggle {
+        top: 0; /* Posisi tombol toggle menu di bagian atas */
+    }
+
+    .novel-item {
+        width: 120px; /* Lebar item novel lebih kecil */
+    }
+
+    header h1 img {
+        width: 30px; /* Lebar gambar header lebih kecil */
+        height: 30px; /* Tinggi gambar header lebih kecil */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Ukuran font h1 lebih kecil */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Ukuran font h2 lebih kecil */
+    }
+}

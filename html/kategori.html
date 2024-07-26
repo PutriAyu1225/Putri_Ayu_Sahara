@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori | Story Scape</title>
+     <!-- Link ke ikon favicon yang akan ditampilkan di tab browser -->
+     <link rel="icon" type="image/png" href="../aset/logo.png">
+    <!-- Link ke file CSS khusus untuk halaman kategori -->
+    <link rel="stylesheet" href="../css/kategori.css">
+</head>
+
+<body>
+    <header>
+        <!-- Tombol menu toggle untuk tampilan mobile -->
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <nav>
+            <ul>
+                <!-- Tautan navigasi ke halaman utama -->
+                <li><a href="index.html">Home</a></li>
+                <!-- Tautan navigasi ke halaman kategori -->
+                <li><a href="kategori.html">Categories</a></li>
+                <!-- Tautan navigasi ke bagian penulis -->
+                <li><a href="#authors">Author</a></li>
+                <!-- Tautan navigasi ke halaman login -->
+                <li><a href="loginn.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Judul untuk bagian kategori novel -->
+        <h2>Kategori Novel</h2>
+        <div>
+            <!-- Dropdown untuk memilih kategori -->
+            <select id="category-select"></select>
+        </div>
+
+        <!-- Judul untuk daftar buku berdasarkan kategori yang dipilih -->
+        <h2>Books in Selected Category</h2>
+        <div id="books"></div> <!-- Tempat untuk menampilkan daftar buku -->
+
+        <section id="authors">
+            <!-- Judul untuk bagian penulis -->
+            <h2>Authors</h2>
+            <div class="authors-container" id="authors-container">
+                <!-- Tempat untuk menampilkan daftar penulis -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Story Scape. By putriayusahara</p>
+    </footer>
+
+    <!-- Link ke file JavaScript untuk interaksi halaman kategori -->
+    <script src="../js/kategori.js"></script>
+</body>
+
+</html>

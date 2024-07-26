@@ -1,0 +1,204 @@
+/* Global Styles */
+*, *::before, *::after {
+    box-sizing: border-box; /* Mengatur box-sizing ke border-box agar padding dan border dimasukkan dalam total ukuran elemen */
+}
+
+body {
+    font-family: sans-serif; /* Mengatur font default untuk seluruh halaman */
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
+    color: #333; /* Warna teks default */
+    background-image: url(/aset/bg_pink.jpeg); /* Mengatur gambar latar belakang untuk halaman */
+}
+
+/* Header and Navigation */
+header {
+    background-color: #9a4064; /* Warna latar belakang header */
+    color: white; /* Warna teks di header */
+    position: fixed; /* Menjaga header tetap di atas saat scroll */
+    width: 100%; /* Lebar penuh */
+    top: 0; /* Posisi di atas halaman */
+    z-index: 1000; /* Menjaga header tetap di atas elemen lainnya */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan pada header */
+    padding: 10px 0; /* Padding vertikal di header */
+}
+
+.menu-toggle {
+    display: none; /* Menyembunyikan tombol menu untuk layar besar */
+    font-size: 24px; /* Ukuran font untuk tombol menu */
+    cursor: pointer; /* Mengubah kursor saat berada di atas tombol menu */
+    margin-right: 20px; /* Margin kanan untuk tombol menu */
+}
+
+nav {
+    display: flex; /* Mengatur navigasi sebagai flex container */
+    justify-content: space-between; /* Menyebarkan item di sepanjang sumbu utama */
+    align-items: center; /* Menyelaraskan item di sepanjang sumbu silang */
+    padding: 0 20px; /* Padding horizontal pada navigasi */
+}
+
+nav ul {
+    list-style-type: none; /* Menghilangkan bullet points dari daftar */
+    margin: 0; /* Margin default dihapus */
+    padding: 0; /* Padding default dihapus */
+    display: flex; /* Mengatur ul sebagai flex container */
+    flex-wrap: wrap; /* Mengizinkan item untuk membungkus ke baris baru jika diperlukan */
+    justify-content: center; /* Menyebarkan item di tengah */
+}
+
+nav ul li {
+    margin: 5px; /* Margin di sekitar item daftar */
+}
+
+nav ul li a {
+    color: white; /* Warna teks link */
+    text-decoration: none; /* Menghilangkan garis bawah dari link */
+    padding: 10px 20px; /* Padding untuk link */
+    display: block; /* Membuat link sebagai blok agar padding berfungsi */
+    background: #b35c7d; /* Warna latar belakang link */
+    border-radius: 5px; /* Sudut melengkung untuk link */
+    border: 2px solid transparent; /* Border transparan untuk transisi */
+}
+
+nav ul li a:hover {
+    background-color: #b30045; /* Warna latar belakang saat hover */
+}
+
+/* Main Content */
+main {
+    padding-top: 80px; /* Padding top untuk menghindari konten tersembunyi di bawah header fixed */
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+#category-select {
+    font-size: 1.2em; /* Ukuran font untuk dropdown kategori */
+    padding: 10px; /* Padding di dalam dropdown */
+    margin: 20px 0; /* Margin vertikal di sekitar dropdown */
+    width: auto; /* Lebar otomatis */
+}
+
+option {
+    font-size: 1.2em; /* Ukuran font untuk opsi dropdown */
+}
+
+.book {
+    background-color: #ffffff; /* Warna latar belakang buku */
+    padding: 20px; /* Padding di dalam kotak buku */
+    margin: 10px; /* Margin di sekitar kotak buku */
+    border-radius: 10px; /* Sudut melengkung untuk kotak buku */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus di sekitar kotak buku */
+    display: inline-block; /* Menampilkan kotak buku sebagai inline-block untuk penataan horizontal */
+    width: 200px; /* Lebar tetap untuk kotak buku */
+    text-align: center; /* Menyelaraskan teks di tengah kotak buku */
+}
+
+.book img {
+    max-width: 100%; /* Memastikan gambar tidak melampaui lebar kotak buku */
+    border-radius: 10px; /* Sudut melengkung untuk gambar buku */
+}
+.book-link {
+    color: black; /* Warna link hitam */
+    text-decoration: none; /* Menghapus garis bawah pada link */
+}
+
+.author-card {
+    background-color: #ffffff; /* Warna latar belakang kartu penulis */
+    padding: 20px; /* Padding di dalam kartu penulis */
+    margin: 10px; /* Margin di sekitar kartu penulis */
+    border-radius: 10px; /* Sudut melengkung untuk kartu penulis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus di sekitar kartu penulis */
+    display: inline-block; /* Menampilkan kartu penulis sebagai inline-block untuk penataan horizontal */
+    width: 200px; /* Lebar tetap untuk kartu penulis */
+    text-align: center; /* Menyelaraskan teks di tengah kartu penulis */
+    flex-shrink: 0; /* Mencegah kartu penulis menyusut dalam flex container */
+}
+
+.author-card img {
+    max-width: 100%; /* Memastikan gambar tidak melampaui lebar kartu penulis */
+    border-radius: 10px; /* Sudut melengkung untuk gambar penulis */
+}
+
+.authors-container {
+    display: flex; /* Mengatur container sebagai flex container */
+    overflow-x: auto; /* Mengizinkan scroll horizontal jika diperlukan */
+    padding: 20px; /* Padding di sekitar container */
+    scroll-behavior: smooth; /* Memastikan scroll halus */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Menyelaraskan teks di tengah footer */
+    padding: 20px; /* Padding di dalam footer */
+    background-color: #993f63; /* Warna latar belakang footer */
+    color: white; /* Warna teks di footer */
+    position: relative; /* Posisi relatif agar footer bisa berada di bawah konten lainnya */
+    bottom: 0; /* Posisi footer di bawah halaman */
+    width: 100%; /* Lebar penuh footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Mengatur daftar navigasi menjadi kolom pada layar kecil */
+        display: none; /* Menyembunyikan daftar navigasi secara default */
+        width: 100%; /* Lebar penuh untuk daftar navigasi */
+        text-align: left; /* Menyelaraskan teks ke kiri */
+    }
+
+    nav ul.showing {
+        display: block; /* Menampilkan daftar navigasi jika kelas 'showing' ditambahkan */
+    }
+    
+    .menu-toggle {
+        display: block; /* Menampilkan tombol menu pada layar kecil */
+    }
+
+    .book, .author-card {
+        width: 100%; /* Mengatur lebar kotak buku dan kartu penulis menjadi 100% pada layar kecil */
+        margin: 10px 0; /* Margin vertikal pada kotak buku dan kartu penulis */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 5px; /* Mengurangi padding di header pada layar sangat kecil */
+    }
+    
+    nav ul li a {
+        padding: 8px 15px; /* Mengurangi padding pada link navigasi di layar kecil */
+    }
+    
+    .book, .author-card {
+        padding: 15px; /* Mengurangi padding di dalam kotak buku dan kartu penulis pada layar kecil */
+    }
+    
+    #category-select {
+        font-size: 1em; /* Mengurangi ukuran font untuk dropdown kategori pada layar kecil */
+        padding: 8px; /* Mengurangi padding di dalam dropdown pada layar kecil */
+    }
+}
+
+/* Responsive Styles for Select and Options */
+@media (max-width: 768px) {
+    #category-select {
+        font-size: 1em; /* Ukuran font dropdown kategori pada layar kecil */
+        padding: 8px; /* Padding di dalam dropdown pada layar kecil */
+        width: 90%; /* Lebar dropdown kategori pada layar kecil */
+    }
+
+    option {
+        font-size: 1em; /* Ukuran font untuk opsi dropdown pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    #category-select {
+        font-size: 0.9em; /* Ukuran font dropdown kategori pada layar sangat kecil */
+        padding: 6px; /* Padding di dalam dropdown pada layar sangat kecil */
+        width: 100%; /* Lebar penuh untuk dropdown kategori pada layar sangat kecil */
+    }
+
+    option {
+        font-size: 0.9em; /* Ukuran font untuk opsi dropdown pada layar sangat kecil */
+    }
+}

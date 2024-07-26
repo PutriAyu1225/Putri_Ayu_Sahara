@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in Sign-up | Story Space</title>
+    <!-- Link ke ikon favicon yang akan ditampilkan di tab browser -->
+    <link rel="icon" type="image/png" href="../aset/logo.png">
+    <!-- Link ke file CSS untuk styling halaman login -->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tombol untuk kembali ke halaman utama -->
+        <button class="back-home-btn" onclick="window.location.href='index.html'">
+            <img src="../aset/corner-up-left-double-line.png" alt="icon-back">
+        </button>
+
+        <div class="signin-signup">
+            <!-- Formulir untuk Sign In -->
+            <form action="" class="sign-in-form" id="sign-in-form">
+                <h2 class="title">Sign In</h2>
+                <div class="input-field">
+                    <!-- Ikon untuk username -->
+                    <i><img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="icon-user"></i>
+                    <input type="text" placeholder="Username" id="sign-in-username" required>
+                </div>
+                <div class="input-field">
+                    <!-- Ikon untuk password -->
+                    <i><img src="https://cdn-icons-png.flaticon.com/128/3064/3064155.png" alt="icon-password"></i>
+                    <input type="password" placeholder="Password" id="sign-in-password" required>
+                    <!-- Ikon untuk toggle  password -->
+                    <i id="toggle-password-sign-in"><img src="https://cdn-icons-png.flaticon.com/128/10812/10812267.png" alt="icon-eye"></i>
+                </div>
+                <input type="submit" value="Login" class="btn">
+                <!-- Tautan untuk berpindah ke halaman Sign Up jika belum memiliki akun -->
+                <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
+            </form>
+
+            <!-- Formulir untuk Sign Up -->
+            <form action="" class="sign-up-form" id="sign-up-form">
+                <h2 class="title">Sign Up</h2>
+                <div class="input-field">
+                    <!-- Ikon untuk username -->
+                    <i><img src="https://cdn-icons-png.flaticon.com/128/1077/1077114.png" alt="icon-user"></i>
+                    <input type="text" placeholder="Username" id="sign-up-username" required>
+                </div>
+                <div class="input-field">
+                    <!-- Ikon untuk email -->
+                    <i><img src="https://cdn-icons-png.flaticon.com/128/646/646135.png" alt="icon-email"></i>
+                    <input type="email" placeholder="Email" id="sign-up-email" required>
+                </div>
+                <div class="input-field">
+                    <!-- Ikon untuk password -->
+                    <i><img src="https://cdn-icons-png.flaticon.com/128/3064/3064155.png" alt="icon-password"></i>
+                    <input type="password" placeholder="Password" id="sign-up-password" required>
+                    <!-- Ikon untuk toggle password -->
+                    <i id="toggle-password-sign-up"><img src="https://cdn-icons-png.flaticon.com/128/10812/10812267.png" alt="icon-eye"></i>
+                </div>
+                <input type="submit" value="Sign up" class="btn">
+                <!-- Tautan untuk berpindah ke halaman Sign In jika sudah memiliki akun -->
+                <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Sign in</a></p>
+            </form>
+        </div>
+
+        <div class="panels-container">
+            <!-- Panel untuk Sign In -->
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Access Your Account</h3>
+                    <!-- Tombol untuk berpindah ke formulir Sign In -->
+                    <button class="btn" id="sign-in-btn">Sign In</button>
+                </div>
+                <img src="../aset/Signin.png" alt="Sign In" class="image">
+            </div>
+
+            <!-- Panel untuk Sign Up -->
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>New to Story Space?</h3>
+                    <!-- Tombol untuk berpindah ke formulir Sign Up -->
+                    <button class="btn" id="sign-up-btn">Sign Up</button>
+                </div>
+                <img src="../aset/SignUp.png" alt="Sign Up" class="image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Link ke file JavaScript untuk interaksi halaman login -->
+    <script src="../js/login.js"></script>
+</body>
+
+</html>
